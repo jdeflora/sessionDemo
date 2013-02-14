@@ -44,7 +44,7 @@
   include "db_connect.php";
   if (isset($_POST['search']))
   {
-  	$searchterm = $_POST['search'];
+  	$searchterm = mysqli_real_escape_string($_POST['search']);
 
   	if ($searchterm == 'movies')
   	{
